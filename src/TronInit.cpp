@@ -16,11 +16,14 @@ void TronInit::initAssetMap( map<string, Asset*>* assetMap )
     string ext;
     string body;
     stringstream path;
+
+    SDL_Init(SDL_INIT_EVERYTHING);
     Image_SDL* tronImage;
     SDL_Surface* screen;
 
     for ( string filename : content )
     {
+
         ext = fileReader.getExt( filename );
         body = fileReader.getBody( filename );
         path.str( "" );

@@ -18,12 +18,7 @@ std::string Image_SDL::getPath(){ return path; }
 
 bool Image_SDL::init()
 {
-    if( screen == NULL )
-    {
-        printf( "This image's target screen is not set ( use it as parameter in this constructor )." );
-        return initialized = false;
-    }
-    else if( path.empty() )
+    if( path.empty() )
     {
         printf( "This image's path is not set ( use setPath() )." );
         return initialized = false;
